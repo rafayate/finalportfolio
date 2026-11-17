@@ -1,0 +1,319 @@
+:root {
+  --bg-color: #f8f6f2;
+  --card-bg: #ffffff;
+  --text-main: #2b2118;
+  --text-muted: #5c4d3c;
+  --primary: #4a2511;       /* Marrón Belgrano Athletic */
+  --primary-light: #6b381c;
+  --accent: #eab308;        /* Amarillo/Dorado Belgrano Athletic */
+  --badge-bg: #fef3c7;
+  --badge-text: #78350f;
+  --shadow: rgba(74, 37, 17, 0.08);
+}
+
+/* Variables para Modo Oscuro */
+body.dark-mode {
+  --bg-color: #181411;
+  --card-bg: #241e1a;
+  --text-main: #f3ede6;
+  --text-muted: #cbbba8;
+  --primary: #361b0c;
+  --primary-light: #522913;
+  --accent: #facc15;
+  --badge-bg: #452715;
+  --badge-text: #fde047;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: var(--primary);
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.theme-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #3b1d0e, #5e3018);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 5px solid var(--accent);
+}
+
+.header-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.tags-top {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pill {
+  background-color: rgba(234, 179, 8, 0.18);
+  border: 1px solid var(--accent);
+  color: #fef08a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.bio {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #f3ede6;
+  margin-bottom: 30px;
+}
+
+.btn-header {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #2b2118;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-header:hover {
+  background-color: #fde047;
+  transform: translateY(-2px);
+}
+
+/* Contenido Principal */
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  flex: 1;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 25px;
+}
+
+/* Sección Sobre Mí */
+.about-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid rgba(120, 53, 15, 0.2);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+/* Botones de filtro */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 2px solid #4a2511;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #4a2511;
+  color: var(--accent);
+}
+
+/* Grilla de Proyectos (2x2 en pantallas grandes) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px var(--shadow);
+  border-top: 4px solid #4a2511;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px var(--shadow);
+  border-top-color: var(--accent);
+}
+
+.card-badge {
+  align-self: flex-start;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  font-size: 1.45rem;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #4a2511;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: #2b2118;
+}
+
+/* Pie de página */
+footer {
+  background-color: var(--primary);
+  color: #e2d8ce;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 70px;
+  font-size: 0.95rem;
+  border-top: 3px solid var(--accent);
+}
