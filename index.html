@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Araujo | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="logo">RA.</span>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" title="Cambiar tema">🌙</button>
+    </div>
+  </nav>
+
+  <header>
+    <div class="header-content">
+      <div class="tags-top">
+        <span class="pill">🏉 Belgrano Athletic Club</span>
+        <span class="pill">🎓 St. Brendan's College</span>
+      </div>
+      <h1>Rafael Araujo</h1>
+      <p class="subtitle">Jugador de Rugby & Estudiante</p>
+      <p class="bio">
+        Hola, soy Rafa. Combino la disciplina y el trabajo en equipo del rugby en Belgrano Athletic con mis estudios en St. Brendan's College y el desarrollo web. Aquí comparto mis proyectos programados con HTML, CSS y JavaScript.
+      </p>
+      <a href="#proyectos" class="btn-header">Explorar Trabajos ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Sobre Mí / Habilidades -->
+    <section id="sobre-mi" class="about-section">
+      <h2>Perfil & Tecnologías</h2>
+      <div class="skills-container">
+        <span class="skill-badge">HTML5</span>
+        <span class="skill-badge">CSS3</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">GitHub Pages</span>
+        <span class="skill-badge">Trabajo en Equipo</span>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+
+      <!-- Filtros interactivos con JS -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todos (4)</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+      </div>
+     
+      <div class="projects-grid">
+       
+        <!-- Proyecto 1: Lista Super -->
+        <div class="card" data-category="js">
+          <div class="card-badge">JavaScript App</div>
+          <h3>Lista de Supermercado</h3>
+          <p>Aplicación web interactiva para agregar, organizar y tachar productos de una lista de compras de forma dinámica.</p>
+          <a href="https://rafayate.github.io/listasuper/" target="_blank" class="btn">Abrir App</a>
+        </div>
+
+        <!-- Proyecto 2: Color Game -->
+        <div class="card" data-category="js">
+          <div class="card-badge">JavaScript Game</div>
+          <h3>Color Game</h3>
+          <p>Juego de lógica visual para adivinar el color exacto a partir de su código RGB, con modos de dificultad y puntaje.</p>
+          <a href="https://rafayate.github.io/colorgame/" target="_blank" class="btn">Jugar Ahora</a>
+        </div>
+
+        <!-- Proyecto 3: Unidad 7 -->
+        <div class="card" data-category="web">
+          <div class="card-badge">Web Design</div>
+          <h3>Proyecto Unidad 7</h3>
+          <p>Desarrollo práctico enfocado en estructura semántica, estilos avanzados y diseño visual en HTML y CSS.</p>
+          <a href="https://rafayate.github.io/unidad-7/" target="_blank" class="btn">Ver Proyecto</a>
+        </div>
+
+        <!-- Proyecto 4: Unidad 9 -->
+        <div class="card" data-category="web">
+          <div class="card-badge">Web Design</div>
+          <h3>Proyecto Unidad 9</h3>
+          <p>Maquetación web completa aplicando diseño responsivo, grillas y organización moderna de contenidos.</p>
+          <a href="https://rafayate.github.io/umidad-9/" target="_blank" class="btn">Ver Proyecto</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho por Rafael Araujo — St. Brendan's College | Belgrano Athletic Club</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
